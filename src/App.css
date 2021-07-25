@@ -1,38 +1,320 @@
-.App {
+.wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 4% auto;
+}
+
+.wrapper-btn {
   text-align: center;
+  margin-top: 3%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  padding: 7px 25px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn:hover {
+  background-color: rgb(114, 114, 114);
+  color: #fff;
+  border: 1px solid transparent;
+} 
+
+.isAnimate-class {
+  animation: animate 2s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.isAnimate2-class {
+  animation: animate2 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.isAnimate3-class {
+  animation: animate3 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.isAnimate4-class {
+  animation: animate4 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.isAnimate5-class {
+  animation: animate5 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.box-area {
+  transform-style: preserve-3d;
+  transform-origin: 100px 100px 0;
+}
+
+.box-area div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+}
+
+.box-area .box1 {
+  background-size: cover;
+  background-position: center center;
+  transform: translateZ(100px);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-area .box2 {
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(90deg) translateZ(100px);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.box-area .box3 {
+  background-size: cover;
+  background-position: center center;
+  transform: rotateX(90deg) rotateY(90deg) translateZ(100px);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.box-area .box4 {
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.box-area .box5 {
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.box-area .box6 {
+  background-size: cover;
+  background-position: center center;
+  transform: rotateX(-90deg) translateZ(100px);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.box1 span,
+.box2 span,
+.box3 span,
+.box4 span,
+.box5 span,
+.box6 span {
+  width: 15%;
+  height: 15%;
+  background-color: #000;
+  margin: 0;
+  border-radius: 50%;
+}
+
+.box4 span:first-child {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+.box4 span:nth-child(2) {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+.box4 span:nth-child(3) {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+.box4 span:last-child {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+/**/
+.box5 span:first-child {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+.box5 span:nth-child(2) {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+.box5 span:nth-child(3) {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+.box5 span:nth-child(4) {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+.box5 span:last-child {
+  position: absolute;
+  right: 85px;
+  bottom: 85px;
+}
+
+/**/
+
+.box6 span:nth-child(1) {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+.box6 span:nth-child(2) {
+  position: absolute;
+  left: 50px;
+  bottom: 85px;
+}
+.box6 span:nth-child(3) {
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
+}
+.box6 span:nth-child(4) {
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+}
+.box6 span:nth-child(5) {
+  position: absolute;
+  right: 50px;
+  bottom: 85px;
+}
+.box6 span:nth-child(6) {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+}
+
+@keyframes animate {
+  from,
   to {
-    transform: rotate(360deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes animate2 {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  100% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+}
+
+@keyframes animate3 {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-270deg) rotateZ(90deg);
+  }
+  100% {
+    transform: rotateY(-180deg) rotateX(90deg);
+  }
+}
+
+@keyframes animate4 {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-270deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  100% {
+    transform: rotateY(-90deg) rotateX(90deg);
+  }
+}
+
+@keyframes animate5 {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
   }
 }
