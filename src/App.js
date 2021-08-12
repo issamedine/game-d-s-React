@@ -31,6 +31,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <p>hello</p>
       <div className="test" data="20"></div>
       <div className="wrapper-btn">
         <button className="btn" onClick={() => handleAnimate(rndInt - 1)}>
